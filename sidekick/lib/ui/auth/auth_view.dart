@@ -32,13 +32,16 @@ class AuthView extends StatelessWidget with $AuthView {
                 TextField(
                   decoration: const InputDecoration(
                     labelText: 'Email',
-                    labelStyle: TextStyle(color: Colors.blue),
+                    labelStyle: TextStyle(color: Colors.white30),
                   ),
                   controller: emailController,
                   keyboardType: TextInputType.emailAddress,
                 ),
                 TextField(
-                  decoration: const InputDecoration(labelText: 'Password'),
+                  decoration: const InputDecoration(
+                    labelText: 'Password',
+                    labelStyle: TextStyle(color: Colors.white30),
+                  ),
                   controller: passwordController,
                 ),
               ],
