@@ -1,0 +1,73 @@
+[33mcommit 158205e03683a13d9aa74fdda51f23955b0f318f[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;32msidekick/master[m[33m)[m
+Merge: 67dbfcf 2d9f45c
+Author: Sai krishna <saaiiikrishna@gmail.com>
+Date:   Sat Nov 12 04:25:27 2022 +0530
+
+    resolving commit
+
+[33mcommit 67dbfcff8fe1843df75f43f3c38d5ada1ff2c3db[m
+Merge: 64ac151 fa101ba
+Author: Sai krishna <saaiiikrishna@gmail.com>
+Date:   Sat Nov 12 03:56:05 2022 +0530
+
+    Merge branch 'main' of https://github.com/Saaiiikrishna/sidekick
+
+[33mcommit 64ac15199a72fc91b11753b9de3806224cf72ce8[m
+Author: Sai krishna <saaiiikrishna@gmail.com>
+Date:   Sat Nov 12 03:32:14 2022 +0530
+
+    small changes
+
+[33mcommit 2d9f45c66564dcb5ec972edc2e2c3e4af86a949e[m[33m ([m[1;31msidekick/master[m[33m)[m
+Author: Sai krishna <saaiiikrishna@gmail.com>
+Date:   Sat Nov 12 02:15:50 2022 +0530
+
+    Create README.md
+
+[33mcommit a1665a96b4dae1235e3902f4b8246f8c7399c19d[m
+Author: sunnyprasad055 <sunnyprasad055@gmail.com>
+Date:   Sat Nov 12 02:02:04 2022 +0530
+
+    local commit
+
+[33mcommit fa101baaf0f67aa7aa80e6f0faf3eca2274489cb[m[33m ([m[1;31msidekick/main[m[33m, [m[1;32mmain[m[33m)[m
+Author: Sai krishna <saaiiikrishna@gmail.com>
+Date:   Sun May 22 18:42:57 2022 +0530
+
+    Update README.md
+
+[33mcommit 21a8cafeaf3db4f7a03e32b7e7436024df15bffd[m
+Author: Sai krishna <saaiiikrishna@gmail.com>
+Date:   Sun May 22 18:07:39 2022 +0530
+
+    Update README.md
+
+[33mcommit 8b00a583fdf29a713fc9e754e16ce2ef85b74850[m
+Author: Sai krishna <saaiiikrishna@gmail.com>
+Date:   Sun May 22 18:07:12 2022 +0530
+
+    Update README.md
+
+[33mcommit debaaddda9ce7f9f5bf1de893d4efcc4199678af[m
+Author: Sai krishna <saaiiikrishna@gmail.com>
+Date:   Sun May 22 18:06:08 2022 +0530
+
+    Update README.md
+
+[33mcommit 4c269c8cc9e9484fe569b64e849d655c805f9890[m
+Author: Sai krishna <saaiiikrishna@gmail.com>
+Date:   Sun May 22 18:03:44 2022 +0530
+
+    Update README.md
+
+[33mcommit aa0387f6b1cbb19b19fd7bff9a503c5903372d5b[m
+Author: Sai krishna <saaiiikrishna@gmail.com>
+Date:   Sun May 22 17:51:29 2022 +0530
+
+    Update README.md
+
+[33mcommit e424a126eacb096272d43de07d273f74b1b0ecf0[m
+Author: Sai krishna <saaiiikrishna@gmail.com>
+Date:   Sun May 22 17:50:19 2022 +0530
+
+    Initial commit
