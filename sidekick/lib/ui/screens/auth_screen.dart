@@ -74,6 +74,42 @@ class AuthLayout extends StatelessWidget {
                       ],
                     ),
                   ),
+                  RichText(
+                    text: const TextSpan(
+                      children: <TextSpan>[
+                        TextSpan(
+                          text: 'S',
+                          style: TextStyle(
+                            fontSize: 56,
+                          ),
+                        ),
+                        TextSpan(
+                          text: 'idekick',
+                          style: TextStyle(
+                            fontSize: 32,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  RichText(
+                    text: const TextSpan(
+                      children: <TextSpan>[
+                        TextSpan(
+                          text: 'S',
+                          style: TextStyle(
+                            fontSize: 56,
+                          ),
+                        ),
+                        TextSpan(
+                          text: 'idekick',
+                          style: TextStyle(
+                            fontSize: 32,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
                 ],
               ),
               Column(
