@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "674838629848",
+    "project_id": "flutter-sidekick-project",
+    "storage_bucket": "flutter-sidekick-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:674838629848:android:542169e5680f8a6a7f76ad",
+        "android_client_info": {
+          "package_name": "co.sidekick.sidekick"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "674838629848-vssrp327l5aq8gic2ajkmn3grd2djfl7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "co.sidekick.sidekick",
+            "certificate_hash": "e98f54b3f894163d07493836dddeac93de3d6720"
+          }
+        },
+        {
+          "client_id": "674838629848-9rli72rpa6jm5pc6bt5oc5lmj4b2185g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZCwvVhz4SaAJewq4lmAecNaSZa_m2qnY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "674838629848-9rli72rpa6jm5pc6bt5oc5lmj4b2185g.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "674838629848-4ilgc63nmum99n61vfn4tp1ep5b3kna0.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "co.sidekick.sidekick"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
