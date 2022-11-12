@@ -28,7 +28,15 @@ class AuthView extends StatelessWidget with $AuthView {
             onSignInWithGoogle: model.useGoogleAuthentication,
             onSignInWithApple: model.useAppleAuthentication,
             form: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                const SizedBox(
+                  height: 40,
+                  child: Text(
+                    'Enter email and password to login',
+                    style: TextStyle(color: Colors.white60),
+                  ),
+                ),
                 TextField(
                   decoration: const InputDecoration(
                     labelText: 'Email',

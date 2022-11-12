@@ -28,210 +28,221 @@ class AuthLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 25.0),
-      child: Column(
-        children: [
-          const SizedBox(
-            height: 50,
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Column(
-                children: [
-                  RichText(
-                    text: const TextSpan(
-                      children: <TextSpan>[
-                        TextSpan(
-                          text: 'S',
-                          style: TextStyle(
-                            fontSize: 56,
-                          ),
-                        ),
-                        TextSpan(
-                          text: 'idekick',
-                          style: TextStyle(
-                            fontSize: 32,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  RichText(
-                    text: const TextSpan(
-                      children: <TextSpan>[
-                        TextSpan(
-                          text: 'S',
-                          style: TextStyle(
-                            fontSize: 56,
-                          ),
-                        ),
-                        TextSpan(
-                          text: 'idekick',
-                          style: TextStyle(
-                            fontSize: 32,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  RotatedBox(
-                    quarterTurns: 1,
-                    child: RichText(
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            const SizedBox(
+              height: 50,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Column(
+                  children: [
+                    RichText(
                       text: const TextSpan(
-                        style: TextStyle(
-                          color: Color.fromARGB(255, 62, 56, 56),
-                          letterSpacing: 3,
-                        ),
                         children: <TextSpan>[
                           TextSpan(
-                            text: 'P',
+                            text: 'S',
                             style: TextStyle(
-                              fontSize: 22,
-                              fontWeight: FontWeight.bold,
+                              fontSize: 56,
                             ),
                           ),
                           TextSpan(
-                            text: 'LAY',
+                            text: 'idekick',
                             style: TextStyle(
-                              fontSize: 14,
-                            ),
-                          ),
-                          TextSpan(
-                            text: ' B',
-                            style: TextStyle(
-                              fontSize: 22,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                          TextSpan(
-                            text: 'ETTER',
-                            style: TextStyle(
-                              fontSize: 14,
-                            ),
-                          ),
-                          TextSpan(
-                            text: ' G',
-                            style: TextStyle(
-                              fontSize: 22,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                          TextSpan(
-                            text: 'AME',
-                            style: TextStyle(
-                              fontSize: 14,
+                              fontSize: 32,
                             ),
                           ),
                         ],
                       ),
                     ),
+                    RichText(
+                      text: const TextSpan(
+                        children: <TextSpan>[
+                          TextSpan(
+                            text: 'S',
+                            style: TextStyle(
+                              fontSize: 56,
+                            ),
+                          ),
+                          TextSpan(
+                            text: 'idekick',
+                            style: TextStyle(
+                              fontSize: 32,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    RotatedBox(
+                      quarterTurns: 1,
+                      child: RichText(
+                        text: const TextSpan(
+                          style: TextStyle(
+                            color: Color.fromARGB(255, 62, 56, 56),
+                            letterSpacing: 3,
+                          ),
+                          children: <TextSpan>[
+                            TextSpan(
+                              text: 'P',
+                              style: TextStyle(
+                                fontSize: 22,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            TextSpan(
+                              text: 'LAY',
+                              style: TextStyle(
+                                fontSize: 14,
+                              ),
+                            ),
+                            TextSpan(
+                              text: ' B',
+                              style: TextStyle(
+                                fontSize: 22,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            TextSpan(
+                              text: 'ETTER',
+                              style: TextStyle(
+                                fontSize: 14,
+                              ),
+                            ),
+                            TextSpan(
+                              text: ' G',
+                              style: TextStyle(
+                                fontSize: 22,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            TextSpan(
+                              text: 'AME',
+                              style: TextStyle(
+                                fontSize: 14,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                //
+                //       if (onCreateAccountTapped != null)
+                //         GestureDetector(
+                //             onTap: onCreateAccountTapped,
+                //             child: Row(
+                //               mainAxisAlignment: MainAxisAlignment.center,
+                //               children: const [
+                //                 Text("Don't have an account?"),
+                //                 Text(
+                //                   'Create an account',
+                //                   style: TextStyle(
+                //                     color: skSecondaryText,
+                //                   ),
+                //                 ),
+                //               ],
+                //             )),
+                //       if (showTermsText)
+                //         const Text(
+                //           'By signing up you agree to our terms, conditions and privacy policy.',
+                //           textAlign: TextAlign.center,
+                //           style: TextStyle(
+                //             color: skSecondaryText,
+                //           ),
+                //         ),
+                //       const Align(
+                //           alignment: Alignment.center,
+                //           child: Text(
+                //             'Or',
+                //           )),
+                //       if (Platform.isIOS)
+                //         AppleAuthButton(
+                //           onPressed: onSignInWithApple ?? () {},
+                //           // darkMode: true,
+                //           text: 'CONTINUE WITH APPLE',
+                //           style: const AuthButtonStyle(
+                //             iconSize: 24,
+                //             height: 50,
+                //             textStyle: TextStyle(color: Colors.white),
+                //             buttonType: AuthButtonType.secondary,
+                //           ),
+                //         ),
+                //       GoogleAuthButton(
+                //         onPressed: onSignInWithGoogle ?? () {},
+                //         text: 'CONTINUE WITH GOOGLE',
+                //         style: const AuthButtonStyle(
+                //           buttonColor: Color(0xff4285F4),
+                //           iconSize: 24,
+                //           iconBackground: Colors.white,
+                //           buttonType: AuthButtonType.secondary,
+                //           height: 50,
+                //           textStyle: TextStyle(color: Colors.white),
+                //         ),
+                //       )
+              ],
+            ),
+            const SizedBox(
+              height: 30,
+            ),
+            form!,
+            if (onForgotPassword != null)
+              Align(
+                heightFactor: 2,
+                alignment: Alignment.centerRight,
+                child: GestureDetector(
+                  onTap: onForgotPassword,
+                  child: const Text(
+                    'Forgot Password',
+                    style: TextStyle(color: Colors.blue),
                   ),
-                ],
+                ),
               ),
-              //       if (onForgotPassword != null)
-              //         Align(
-              //           alignment: Alignment.centerRight,
-              //           child: GestureDetector(
-              //             onTap: onForgotPassword,
-              //             child: const Text(
-              //               'Forgot Password?',
-              //             ),
-              //           ),
-              //         ),
-              //       if (validationMessage != null)
-              //         Text(
-              //           validationMessage!,
-              //           style: const TextStyle(
-              //             color: Colors.red,
-              //             fontSize: skBodyTextSize,
-              //           ),
-              //         ),
-              //       if (validationMessage != null) const SizedBox(width: 18.0),
-              //       GestureDetector(
-              //         onTap: onMainButtonTapped,
-              //         child: Container(
-              //           width: double.infinity,
-              //           height: 50,
-              //           alignment: Alignment.center,
-              //           decoration: BoxDecoration(
-              //             color: skForeGround,
-              //             borderRadius: BorderRadius.circular(8),
-              //           ),
-              //           child: busy
-              //               ? const CircularProgressIndicator.adaptive(
-              //                   valueColor: AlwaysStoppedAnimation(Colors.white),
-              //                 )
-              //               : Text(
-              //                   mainButtonTitle!,
-              //                   style: const TextStyle(
-              //                     color: Colors.white,
-              //                     fontWeight: FontWeight.bold,
-              //                     fontSize: 14,
-              //                   ),
-              //                 ),
-              //         ),
-              //       ),
-              //       if (onCreateAccountTapped != null)
-              //         GestureDetector(
-              //             onTap: onCreateAccountTapped,
-              //             child: Row(
-              //               mainAxisAlignment: MainAxisAlignment.center,
-              //               children: const [
-              //                 Text("Don't have an account?"),
-              //                 Text(
-              //                   'Create an account',
-              //                   style: TextStyle(
-              //                     color: skSecondaryText,
-              //                   ),
-              //                 ),
-              //               ],
-              //             )),
-              //       if (showTermsText)
-              //         const Text(
-              //           'By signing up you agree to our terms, conditions and privacy policy.',
-              //           textAlign: TextAlign.center,
-              //           style: TextStyle(
-              //             color: skSecondaryText,
-              //           ),
-              //         ),
-              //       const Align(
-              //           alignment: Alignment.center,
-              //           child: Text(
-              //             'Or',
-              //           )),
-              //       if (Platform.isIOS)
-              //         AppleAuthButton(
-              //           onPressed: onSignInWithApple ?? () {},
-              //           // darkMode: true,
-              //           text: 'CONTINUE WITH APPLE',
-              //           style: const AuthButtonStyle(
-              //             iconSize: 24,
-              //             height: 50,
-              //             textStyle: TextStyle(color: Colors.white),
-              //             buttonType: AuthButtonType.secondary,
-              //           ),
-              //         ),
-              //       GoogleAuthButton(
-              //         onPressed: onSignInWithGoogle ?? () {},
-              //         text: 'CONTINUE WITH GOOGLE',
-              //         style: const AuthButtonStyle(
-              //           buttonColor: Color(0xff4285F4),
-              //           iconSize: 24,
-              //           iconBackground: Colors.white,
-              //           buttonType: AuthButtonType.secondary,
-              //           height: 50,
-              //           textStyle: TextStyle(color: Colors.white),
-              //         ),
-              //       )
-            ],
-          ),
-          form!,
-        ],
+            const SizedBox(
+              height: 25,
+            ),
+            if (validationMessage != null)
+              Text(
+                validationMessage!,
+                style: const TextStyle(
+                  color: Colors.red,
+                  fontSize: 12,
+                ),
+              ),
+            if (validationMessage != null) const SizedBox(width: 18.0),
+            GestureDetector(
+              onTap: onMainButtonTapped,
+              child: Container(
+                width: double.infinity,
+                height: 50,
+                alignment: Alignment.center,
+                decoration: BoxDecoration(
+                  color: Colors.blue,
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child: busy
+                    ? const CircularProgressIndicator.adaptive(
+                        valueColor: AlwaysStoppedAnimation(Colors.white),
+                      )
+                    : const Text(
+                        'Login',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 14,
+                        ),
+                      ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
