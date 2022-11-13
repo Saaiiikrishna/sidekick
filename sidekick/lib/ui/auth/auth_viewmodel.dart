@@ -8,7 +8,7 @@ class AuthViewModel extends LoginViewModel {
   final _firebaseAuthenticationService =
       locator<FirebaseAuthenticationService>();
 
-  AuthViewModel() : super(successRoute: Routes.addressSelectionView);
+  AuthViewModel() : super(successRoute: Routes.startUpView);
 
   @override
   Future<FirebaseAuthenticationResult> runAuthentication() =>

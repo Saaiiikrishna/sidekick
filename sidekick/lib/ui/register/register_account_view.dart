@@ -25,18 +25,46 @@ class RegisterAccountView extends StatelessWidget with $RegisterAccountView {
             busy: model.isBusy,
             onMainButtonTapped: model.saveData,
             validationMessage: model.validationMessage,
+            onSignInWithGoogle: model.useGoogleAuthentication,
+            onSignInWithApple: model.useAppleAuthentication,
+            mainButtonTitle: 'Register',
+            subtitle: 'rgjfkdj',
+            googleLogIn: 'Register with Google',
+            appleLogin: 'Register with Apple',
             form: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                const SizedBox(
+                  height: 30,
+                  child: Text(
+                    'Create account',
+                    style: TextStyle(
+                      color: Colors.white60,
+                      fontSize: 20,
+                    ),
+                  ),
+                ),
                 TextField(
-                  decoration: const InputDecoration(labelText: 'Full Name'),
+                  decoration: const InputDecoration(
+                    labelText: 'Full Name',
+                    labelStyle: TextStyle(color: Colors.white30),
+                  ),
                   controller: fullNameController,
                 ),
                 TextField(
-                  decoration: const InputDecoration(labelText: 'Email'),
+                  decoration: const InputDecoration(
+                    labelText: 'Email',
+                    labelStyle: TextStyle(color: Colors.white30),
+                  ),
+                  keyboardType: TextInputType.emailAddress,
                   controller: emailController,
                 ),
                 TextField(
-                  decoration: const InputDecoration(labelText: 'Password'),
+                  obscureText: true,
+                  decoration: const InputDecoration(
+                    labelText: 'Password',
+                    labelStyle: TextStyle(color: Colors.white30),
+                  ),
                   controller: passwordController,
                 ),
               ],

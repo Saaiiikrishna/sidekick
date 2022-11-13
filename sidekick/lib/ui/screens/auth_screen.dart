@@ -1,4 +1,7 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:auth_buttons/auth_buttons.dart';
 
 class AuthLayout extends StatelessWidget {
   final Widget? form;
@@ -9,6 +12,10 @@ class AuthLayout extends StatelessWidget {
   final void Function()? onSignInWithApple;
   final void Function()? onSignInWithGoogle;
   final String? validationMessage;
+  final String? subtitle;
+  final String? googleLogIn;
+  final String? appleLogin;
+  final String? mainButtonTitle;
   final bool busy;
 
   const AuthLayout({
@@ -20,8 +27,12 @@ class AuthLayout extends StatelessWidget {
     this.onSignInWithApple,
     this.onSignInWithGoogle,
     this.validationMessage,
-    this.showTermsText = true,
+    this.subtitle,
+    this.mainButtonTitle,
+    this.showTermsText = false,
     this.busy = false,
+    this.googleLogIn,
+    this.appleLogin,
   }) : super(key: key);
 
   @override
@@ -38,6 +49,7 @@ class AuthLayout extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     RichText(
                       text: const TextSpan(
@@ -58,22 +70,7 @@ class AuthLayout extends StatelessWidget {
                       ),
                     ),
                     RichText(
-                      text: const TextSpan(
-                        children: <TextSpan>[
-                          TextSpan(
-                            text: 'S',
-                            style: TextStyle(
-                              fontSize: 56,
-                            ),
-                          ),
-                          TextSpan(
-                            text: 'idekick',
-                            style: TextStyle(
-                              fontSize: 32,
-                            ),
-                          ),
-                        ],
-                      ),
+                      text: TextSpan(text: subtitle!),
                     ),
                   ],
                 ),
@@ -134,68 +131,15 @@ class AuthLayout extends StatelessWidget {
                     ),
                   ],
                 ),
-                //
-                //       if (onCreateAccountTapped != null)
-                //         GestureDetector(
-                //             onTap: onCreateAccountTapped,
-                //             child: Row(
-                //               mainAxisAlignment: MainAxisAlignment.center,
-                //               children: const [
-                //                 Text("Don't have an account?"),
-                //                 Text(
-                //                   'Create an account',
-                //                   style: TextStyle(
-                //                     color: skSecondaryText,
-                //                   ),
-                //                 ),
-                //               ],
-                //             )),
-                //       if (showTermsText)
-                //         const Text(
-                //           'By signing up you agree to our terms, conditions and privacy policy.',
-                //           textAlign: TextAlign.center,
-                //           style: TextStyle(
-                //             color: skSecondaryText,
-                //           ),
-                //         ),
-                //       const Align(
-                //           alignment: Alignment.center,
-                //           child: Text(
-                //             'Or',
-                //           )),
-                //       if (Platform.isIOS)
-                //         AppleAuthButton(
-                //           onPressed: onSignInWithApple ?? () {},
-                //           // darkMode: true,
-                //           text: 'CONTINUE WITH APPLE',
-                //           style: const AuthButtonStyle(
-                //             iconSize: 24,
-                //             height: 50,
-                //             textStyle: TextStyle(color: Colors.white),
-                //             buttonType: AuthButtonType.secondary,
-                //           ),
-                //         ),
-                //       GoogleAuthButton(
-                //         onPressed: onSignInWithGoogle ?? () {},
-                //         text: 'CONTINUE WITH GOOGLE',
-                //         style: const AuthButtonStyle(
-                //           buttonColor: Color(0xff4285F4),
-                //           iconSize: 24,
-                //           iconBackground: Colors.white,
-                //           buttonType: AuthButtonType.secondary,
-                //           height: 50,
-                //           textStyle: TextStyle(color: Colors.white),
-                //         ),
-                //       )
               ],
             ),
             const SizedBox(
-              height: 30,
+              height: 15,
             ),
             form!,
             if (onForgotPassword != null)
               Align(
-                heightFactor: 2,
+                heightFactor: 3,
                 alignment: Alignment.centerRight,
                 child: GestureDetector(
                   onTap: onForgotPassword,
@@ -205,18 +149,29 @@ class AuthLayout extends StatelessWidget {
                   ),
                 ),
               ),
-            const SizedBox(
-              height: 25,
-            ),
             if (validationMessage != null)
-              Text(
-                validationMessage!,
-                style: const TextStyle(
-                  color: Colors.red,
-                  fontSize: 12,
+              Padding(
+                padding: const EdgeInsets.only(bottom: 10),
+                child: Text(
+                  validationMessage!,
+                  style: const TextStyle(
+                    color: Colors.red,
+                    fontSize: 14,
+                  ),
                 ),
               ),
-            if (validationMessage != null) const SizedBox(width: 18.0),
+            if (showTermsText)
+              const Padding(
+                padding: EdgeInsets.symmetric(vertical: 15),
+                child: Text(
+                  "By registering, you are agreeing all our terms, conditions and privacy policy.",
+                  textAlign: TextAlign.justify,
+                  style: TextStyle(
+                    color: Colors.white60,
+                    fontSize: 9.5,
+                  ),
+                ),
+              ),
             GestureDetector(
               onTap: onMainButtonTapped,
               child: Container(
@@ -224,23 +179,91 @@ class AuthLayout extends StatelessWidget {
                 height: 50,
                 alignment: Alignment.center,
                 decoration: BoxDecoration(
-                  color: Colors.blue,
+                  color: Colors.white,
                   borderRadius: BorderRadius.circular(8),
                 ),
                 child: busy
                     ? const CircularProgressIndicator.adaptive(
-                        valueColor: AlwaysStoppedAnimation(Colors.white),
+                        valueColor: AlwaysStoppedAnimation(Colors.black),
                       )
-                    : const Text(
-                        'Login',
-                        style: TextStyle(
-                          color: Colors.white,
+                    : Text(
+                        mainButtonTitle!,
+                        style: const TextStyle(
+                          color: Colors.black,
                           fontWeight: FontWeight.bold,
-                          fontSize: 14,
+                          fontSize: 16,
                         ),
                       ),
               ),
             ),
+            const SizedBox(
+              height: 15,
+            ),
+            if (Platform.isIOS)
+              Column(
+                children: [
+                  AppleAuthButton(
+                    onPressed: onSignInWithApple ?? () {},
+                    // darkMode: true,
+                    text: appleLogin!,
+                    style: const AuthButtonStyle(
+                      buttonColor: Colors.white,
+                      iconSize: 20,
+                      height: 50,
+                      width: double.infinity,
+                      textStyle: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16,
+                      ),
+                      buttonType: AuthButtonType.secondary,
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 15,
+                  ),
+                ],
+              ),
+            GoogleAuthButton(
+              onPressed: onSignInWithGoogle ?? () {},
+              text: googleLogIn!,
+              style: const AuthButtonStyle(
+                buttonColor: Colors.white,
+                iconSize: 20,
+                iconBackground: Colors.white,
+                width: double.infinity,
+                height: 50,
+                textStyle: TextStyle(
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 16,
+                ),
+              ),
+            ),
+            const SizedBox(
+              height: 15,
+            ),
+            if (onCreateAccountTapped != null)
+              GestureDetector(
+                onTap: onCreateAccountTapped,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: const [
+                    Text(
+                      "Don't have an account?",
+                      style: TextStyle(
+                        color: Colors.white60,
+                      ),
+                    ),
+                    Text(
+                      ' Create an account',
+                      style: TextStyle(
+                        color: Colors.blue,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
           ],
         ),
       ),

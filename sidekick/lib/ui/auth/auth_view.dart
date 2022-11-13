@@ -12,6 +12,7 @@ import 'package:stacked/stacked_annotations.dart';
 ])
 class AuthView extends StatelessWidget with $AuthView {
   AuthView({Key? key}) : super(key: key);
+  final bool isVisible = true;
 
   @override
   Widget build(BuildContext context) {
@@ -27,11 +28,15 @@ class AuthView extends StatelessWidget with $AuthView {
             validationMessage: model.validationMessage,
             onSignInWithGoogle: model.useGoogleAuthentication,
             onSignInWithApple: model.useAppleAuthentication,
+            mainButtonTitle: 'LOGIN',
+            subtitle: 'fddslgjh',
+            googleLogIn: 'Log in with Google',
+            appleLogin: 'Log In with Apple',
             form: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const SizedBox(
-                  height: 40,
+                  height: 30,
                   child: Text(
                     'Enter email and password to login',
                     style: TextStyle(color: Colors.white60),
@@ -46,6 +51,7 @@ class AuthView extends StatelessWidget with $AuthView {
                   keyboardType: TextInputType.emailAddress,
                 ),
                 TextField(
+                  obscureText: isVisible,
                   decoration: const InputDecoration(
                     labelText: 'Password',
                     labelStyle: TextStyle(color: Colors.white30),
