@@ -1,3 +1,4 @@
+import 'package:places_service/places_service.dart';
 import 'package:sidekick/app/app.locator.dart';
 import 'package:sidekick/app/app.logger.dart';
 import 'package:sidekick/app/app.router.dart';
@@ -9,8 +10,11 @@ class StartUpViewModel extends BaseViewModel {
   final log = getLogger('StartUpViewModel');
   final _userService = locator<UserService>();
   final _navigationService = locator<NavigationService>();
+  final _placesService = locator<PlacesService>();
 
   Future<void> runStartupLogic() async {
+    _placesService.initialize(
+        apiKey: 'AIzaSyCv40wPtraO_z6vLGS_Hc8ar8PlZ7JvX2E');
     if (_userService.hasLoggedInUser) {
       log.v(
           'We found a user on the device, synchronizing the user profile ...');
