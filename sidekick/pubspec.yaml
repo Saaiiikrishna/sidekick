@@ -54,8 +54,11 @@ dependencies:
 
   # data models
   freezed_annotation: ^2.0.3
-  json_annotation: ^4.5.0
+  json_annotation: ^4.6.0
   places_service: ^0.1.2
+
+dependency_overrides:
+  analyzer: ">=4.2.0 <5.0.0"
 
 dev_dependencies:
   flutter_test:
@@ -66,7 +69,7 @@ dev_dependencies:
 
   # data models
   json_serializable: ^6.2.0
-  freezed: ^2.0.3+1
+  freezed: ^2.0.5
 
   # Testing
   mockito: ^5.2.0

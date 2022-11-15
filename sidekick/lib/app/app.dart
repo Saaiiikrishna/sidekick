@@ -1,3 +1,4 @@
+import 'package:places_service/places_service.dart';
 import 'package:sidekick/api/firestore_api.dart';
 import 'package:sidekick/services/user_service.dart';
 import 'package:sidekick/ui/address_selection/address_selection_view.dart';
@@ -21,6 +22,7 @@ import 'package:stacked_services/stacked_services.dart';
     LazySingleton(classType: NavigationService),
     LazySingleton(classType: UserService),
     LazySingleton(classType: FirestoreApi),
+    LazySingleton(classType: PlacesService),
     Singleton(classType: FirebaseAuthenticationService),
   ],
   logger: StackedLogger(),
